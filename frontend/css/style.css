@@ -454,3 +454,30 @@ footer {
         overflow-wrap: break-word;
     }
 }
+
+/* WEATHER */
+.weather-section {
+    max-width: 900px;
+    padding: 40px;
+}
+
+.weather-section h2 {
+    color: #103f32;
+    font-size: 32px;
+}
+
+.weather-card {
+    background-color: #f4f7f5;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e8e3;
+}
+
+.weather-card h3 {
+    color: #103f32;
+}
+
+.weather-card p {
+    line-height: 1.6;
+}

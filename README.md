@@ -29,6 +29,7 @@ The goal of the project is to make it easier for tourists to discover available 
 - My Bookings and My Profile placeholder pages
 - Responsive layout
 - Single Page Application navigation
+- Weather page placeholder for future external API integration
 
 ### Planned for Future Milestones
 
