@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RaftBook | Adventure Tours</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   <header class="navbar">
+    <a href="#home" class="logo">
+    <svg class="logo-icon" viewBox="0 0 64 64"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 43 L22 17 L32 31 L40 10 L59 43"
+              fill="none" stroke="white"
+              stroke-width="4" stroke-linejoin="round"/>
+        <path d="M5 52 Q12 46 19 52 T33 52 T47 52 T61 52"
+              fill="none" stroke="#20b99b"
+              stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    <span>RaftBook</span>
+    </a>
+    <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#tours">Tours</a>
+        <a href="#weather">Weather</a>
+        <a href="#login">Login</a>
+        <a href="#register" class="register-link">Register</a>
+    </nav>
+</header>
+    <main>
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="eyebrow">YOUR NEXT ADVENTURE</p>
+        <h2>Discover the wild beauty of Tara</h2>
+        <p>
+            Experience unforgettable rafting adventures
+            surrounded by breathtaking nature.
+        </p>
+
+        <a href="#tours" class="hero-button">Explore our tours</a>
+    </div>
+    </section>
+    <section id="tours" class="tours-section">
+    <p class="eyebrow">CHOOSE YOUR EXPERIENCE</p>
+    <h2>Our Adventures</h2>
+    <p>Find the perfect adventure for your next trip.</p>
+
+    <div class="tour-container">
+
+        <div class="tour-card">
+            <div class="tour-image rafting-image"></div>
+            <div class="tour-info">
+                <h3>Tara River Rafting</h3>
+                <p>Experience the excitement of rafting through the beautiful Tara Canyon.</p>
+                <p><strong>Duration:</strong> 3–4 hours</p>
+                <a href="#tour-details" class="tour-button" data-tour="rafting">View details</a>     
+           </div>
+        </div>
+
+        <div class="tour-card">
+            <div class="tour-image hiking-image"></div>
+            <div class="tour-info">
+                <h3>Mountain Hiking</h3>
+                <p>Discover beautiful mountain trails and unforgettable views.</p>
+                <p><strong>Duration:</strong> Half day</p>
+                <a href="#tour-details" class="tour-button" data-tour="hiking">View details</a>            </div>
+        </div>
+
+        <div class="tour-card">
+            <div class="tour-image canyoning-image"></div>
+            <div class="tour-info">
+                <h3>Canyoning Adventure</h3>
+                <p>Explore hidden natural landscapes and refreshing mountain streams.</p>
+                <p><strong>Duration:</strong> 3 hours</p>
+                <a href="#tour-details" class="tour-button" data-tour="canyoning">View details</a>            </div>
+        </div>
+
+    </div>
+    </section>
+    <section id="tour-details" class="details-section">
+
+    <a href="#tours" class="back-link">← Back to Tours</a>
+
+    <h2 id="detail-title">Tara River Rafting</h2>
+
+    <div class="details-layout">
+        <div id="detail-image" class="details-photo"></div>
+
+        <div class="details-info">
+            <h3>About this adventure</h3>
+
+            <p id="detail-description">
+                Enjoy an unforgettable rafting experience
+                through the beautiful Tara River Canyon.
+            </p>
+
+            <p><strong>Duration:</strong> <span id="detail-duration">3–4 hours</span></p>
+
+            <p><strong>Price:</strong> <span id="detail-price">70 BAM</span></p>
+
+            <p><strong>Location:</strong> <span id="detail-location">Tara River, Foča</span></p>
+
+            <button id="book-button" type="button">Book Now</button>
+        </div>
+    </div>
+
+</section>
+        <section id="weather">
+            <h2>Weather</h2>
+            <p>Weather information</p>
+        </section>
+       <section id="login" class="auth-section">
+    <h2>Welcome Back!</h2>
+    <p>Log in to manage your adventures.</p>
+
+    <form id="login-form">
+        <label for="login-email">Email</label>
+        <input type="email" id="login-email" required>
+
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" required>
+
+        <button type="submit">Log In</button>
+    </form>
+    <p>
+        <a href="#dashboard">Preview Dashboard (Demo)</a>
+    </p>
+
+    <p>
+        Don't have an account?
+        <a href="#register">Register here</a>
+    </p>
+</section>
+        <section id="register" class="auth-section">
+    <h2>Create an Account</h2>
+
+    <form id="register-form">
+        <label for="register-name">Full Name</label>
+        <input type="text" id="register-name" required>
+
+        <label for="register-email">Email</label>
+        <input type="email" id="register-email" required>
+
+        <label for="register-password">Password</label>
+        <input type="password" id="register-password" required>
+
+        <button type="submit">Register</button>
+    </form>
+    <p>
+    Already have an account?
+    <a href="#login">Log in here</a>
+</p>
+</section>
+<section id="dashboard" class="dashboard-section">
+
+    <h2>My Dashboard</h2>
+    <p>Welcome to RaftBook! Manage your adventures here.</p>
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h3>My Bookings</h3>
+            <p>View your upcoming adventures.</p>
+            <a href="#bookings">View Bookings</a>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>Explore Tours</h3>
+            <p>Discover your next adventure.</p>
+            <a href="#tours">Browse Tours</a>
+        </div>
+
+        <div class="dashboard-card">
+            <h3>My Profile</h3>
+            <p>Manage your personal information.</p>
+            <a href="#profile">View Profile</a>
+        </div>
+
+    </div>
+
+</section>
+<section id="bookings" class="dashboard-section">
+    <h2>My Bookings</h2>
+    <p>You don't have any bookings yet.</p>
+
+    <a href="#tours" class="tour-button">
+        Explore Tours
+    </a>
+</section>
+
+<section id="profile" class="dashboard-section">
+    <h2>My Profile</h2>
+    <p>Your profile information will appear here.</p>
+
+    <a href="#dashboard" class="back-link">
+        ← Back to Dashboard
+    </a>
+</section>
+    </main>
+    <footer>
+        <p>RaftBook - Adventure starts here.</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
