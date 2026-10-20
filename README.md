@@ -78,7 +78,7 @@ raftbook/
 │   └── logs/
 ├── docs/
 │   ├── AI_LOG.md
-│   └── ERD.svg
+│   └── ERD.png
 ├── .gitignore
 ├── AGENTS.md
 └── README.md
