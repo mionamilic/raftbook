@@ -1,32 +1,18 @@
 
-const pages = document.querySelectorAll("main section");
+const app = document.getElementById("app");
 
-// Show only the selected page
-function showPage(pageId) {
-    pages.forEach((page) => {
-        if (page.id === pageId) {
-            page.style.display = "";
-        } else {
-            page.style.display = "none";
-        }
-    });
-}
-
-// SPA navigation
-function navigate() {
-    const pageId = window.location.hash.substring(1) || "home";
-    const page = document.getElementById(pageId);
-
-    if (page && page.tagName === "SECTION") {
-        showPage(pageId);
-    } else {
-        showPage("home");
-    }
-
-    window.scrollTo(0, 0);
-}
-
-window.addEventListener("hashchange", navigate);
+// Available pages
+const pages = [
+    "home",
+    "tours",
+    "tour-details",
+    "weather",
+    "login",
+    "register",
+    "dashboard",
+    "bookings",
+    "profile"
+];
 
 // Tour data
 const tours = {
@@ -58,7 +44,38 @@ const tours = {
     }
 };
 
-// Show details of selected tour
+// Remember which tour was selected
+let selectedTour = "rafting";
+
+// Load a view without reloading the entire page
+async function navigate() {
+    let pageId = window.location.hash.substring(1) || "home";
+
+    if (!pages.includes(pageId)) {
+        pageId = "home";
+    }
+
+    try {
+        const response = await fetch(`views/${pageId}.html`);
+
+        if (!response.ok) {
+            throw new Error("Could not load the page.");
+        }
+
+        const html = await response.text();
+        app.innerHTML = html;
+
+        // Initialize functionality for the loaded view
+        initializePage(pageId);
+
+        window.scrollTo(0, 0);
+    } catch (error) {
+        console.error(error);
+        app.innerHTML = "<p>Unable to load this page.</p>";
+    }
+}
+
+// Display selected tour information
 function showTourDetails(tourName) {
     const tour = tours[tourName];
 
@@ -83,45 +100,58 @@ function showTourDetails(tourName) {
     image.classList.add(tour.image);
 }
 
-// Connect View details buttons
-const tourButtons = document.querySelectorAll(".tour-button[data-tour]");
+// Connect functionality after a view is loaded
+function initializePage(pageId) {
 
-tourButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        const tourName = button.getAttribute("data-tour");
-        showTourDetails(tourName);
-    });
-});
+    if (pageId === "tours") {
+        const tourButtons = document.querySelectorAll(
+            ".tour-button[data-tour]"
+        );
 
-// Book Now button
-const bookButton = document.getElementById("book-button");
+        tourButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                selectedTour = button.getAttribute("data-tour");
 
-if (bookButton) {
-    bookButton.addEventListener("click", () => {
-        alert("Please log in to book this adventure.");
-        window.location.hash = "login";
-    });
+                // If already on the details route, reload it
+                if (window.location.hash === "#tour-details") {
+                    navigate();
+                }
+            });
+        });
+    }
+
+    if (pageId === "tour-details") {
+        showTourDetails(selectedTour);
+
+        const bookButton = document.getElementById("book-button");
+
+        bookButton.addEventListener("click", () => {
+            alert("Please log in to book this adventure.");
+            window.location.hash = "login";
+        });
+    }
+
+    if (pageId === "login") {
+        const loginForm = document.getElementById("login-form");
+
+        loginForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            alert("Login will be available when the backend is connected.");
+        });
+    }
+
+    if (pageId === "register") {
+        const registerForm = document.getElementById("register-form");
+
+        registerForm.addEventListener("submit", (event) => {
+            event.preventDefault();
+            alert("Registration will be available when the backend is connected.");
+        });
+    }
 }
 
-// Prevent forms from reloading the page.
-// Real login and registration will be added with the backend.
-const loginForm = document.getElementById("login-form");
+// Listen for navigation changes
+window.addEventListener("hashchange", navigate);
 
-if (loginForm) {
-    loginForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        alert("Login will be available when the backend is connected.");
-    });
-}
-
-const registerForm = document.getElementById("register-form");
-
-if (registerForm) {
-    registerForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        alert("Registration will be available when the backend is connected.");
-    });
-}
-
-// Open the correct page when the website starts
+// Load initial page
 navigate();

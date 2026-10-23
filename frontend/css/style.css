@@ -1,4 +1,6 @@
+/* RaftBook - Milestone 1 stylesheet */
 
+/* GENERAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,27 +8,7 @@ body {
     color: #24352e;
 }
 
-header {
-    background-color: #174c3c;
-    color: white;
-    text-align: center;
-    padding: 35px;
-}
-
-nav {
-    background-color: #ffffff;
-    padding: 18px;
-    text-align: center;
-}
-
-nav a {
-    color: #174c3c;
-    text-decoration: none;
-    margin: 15px;
-    font-weight: bold;
-}
-
-section {
+main section {
     background-color: white;
     margin: 25px auto;
     padding: 25px;
@@ -41,8 +23,7 @@ button {
     padding: 12px 20px;
     border-radius: 6px;
     cursor: pointer;
-}
-
+}   
 input {
     display: block;
     padding: 10px;
@@ -55,230 +36,15 @@ footer {
     text-align: center;
     padding: 20px;
 }
-.hero {
-    min-height: 480px;
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    box-sizing: border-box;
-    background-color: #174c3c;
-    color: white;
-    background-image:
-        linear-gradient(rgba(0, 30, 20, 0.35), rgba(0, 30, 20, 0.35)),
-        url("https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1600&q=80");
-    background-size: cover;
-    background-position: center;
-    border-radius: 12px;
-}
 
-.hero-content {
-    max-width: 650px;
-}
-
-.hero h2 {
-    font-size: 42px;
-    margin-bottom: 15px;
-}
-
-.eyebrow {
-    letter-spacing: 3px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.hero-button {
-    display: inline-block;
-    background-color: #d6f36a;
-    color: #173b2e;
-    padding: 14px 22px;
-    margin-top: 12px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.hero-button:hover {
-    background-color: white;
-}
-.tours-section {
-    background-color: #f4f7f5;
-}
-
-.tours-section > h2 {
-    color: #174c3c;
-    font-size: 32px;
-}
-
-.tour-container {
-    display: flex;
-    gap: 25px;
-    margin-top: 30px;
-}
-
-.tour-card {
-    flex: 1;
-    min-width: 0;
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-}
-
-.tour-image {
-    height: 190px;
-    background-size: cover;
-    background-position: center;
-}
-
-.rafting-image {
-    background-image: url("https://images.unsplash.com/photo-1568282248650-2aff2b2b1bc9?auto=format&fit=crop&w=900&q=85");
-    background-size: cover;
-    background-position: center;
-}
-.hiking-image {
-    background-image: url("https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=80");
-}
-
-.canyoning-image {
-    background-image: url("https://canyoning.ba/wp-content/uploads/2021/09/hrcavka_high.jpg");
-    background-size: cover;
-    background-position: center;
-}
-.tour-info {
-    padding: 20px;
-}
-
-.tour-info h3 {
-    color: #174c3c;
-}
-
-.tour-info p {
-    line-height: 1.6;
-}
-
-.tour-button {
-    display: inline-block;
-    background-color: #174c3c;
-    color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.tour-button:hover {
-    background-color: #26765c;
-}
-
-@media (max-width: 750px) {
-    .tour-container {
-        flex-direction: column;
-    }
-
-    .hero {
-        padding: 25px;
-    }
-
-    .hero h2 {
-        font-size: 32px;
-    }
-}
-/* NAVIGATION */
-
-.navbar {
-    background-color: #103f32;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 8%;
-}
-
-.logo {
-    color: white;
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.nav-links {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 0;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    margin: 0;
-}
-
-.nav-links a:hover {
-    color: #d6f36a;
-}
-
-.nav-links .register-link {
-    background-color: #d6f36a;
-    color: #103f32;
-    padding: 10px 18px;
-    border-radius: 6px;
-}
-
-.nav-links .register-link:hover {
-    background-color: white;
-    color: #103f32;
-}
-
-/* RESPONSIVE NAVIGATION */
-
-@media (max-width: 750px) {
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-}
-/* LOGIN AND REGISTER */
-
-.auth-section {
-    max-width: 500px;
-    padding: 35px;
-}
-
-.auth-section h2 {
-    color: #174c3c;
-}
-
-.auth-section input {
-    width: 100%;
-    max-width: none;
-    box-sizing: border-box;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-}
-
-.auth-section label {
-    font-weight: bold;
-}
-
-.auth-section button {
-    margin-top: 10px;
-}
-/* MODERN NAVBAR */
-
+/* HEADER AND NAVIGATION */
 .navbar {
     background-color: #073c30;
-    padding: 18px 7%;
+    color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 18px 7%;
 }
 
 .logo {
@@ -301,6 +67,7 @@ footer {
     display: flex;
     gap: 35px;
     align-items: center;
+    padding: 0;
 }
 
 .nav-links a {
@@ -308,31 +75,53 @@ footer {
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
+    margin: 0;
 }
 
 .nav-links a:hover {
     color: #d6f36a;
 }
-/* FULL WIDTH HERO */
 
+.nav-links .register-link {
+    background-color: #d6f36a;
+    color: #103f32;
+    padding: 10px 18px;
+    border-radius: 6px;
+}
+
+.nav-links .register-link:hover {
+    background-color: white;
+    color: #103f32;
+}
+
+/* HOME */
 #home.hero {
-    max-width: none;
     width: 100%;
+    max-width: none;
     min-height: 580px;
     margin: 0;
     border-radius: 0;
     padding: 70px 8%;
     box-sizing: border-box;
-
     display: flex;
     align-items: center;
-
+    background-color: #174c3c;
+    color: white;
+    background-image:
+        linear-gradient(rgba(0, 30, 20, 0.35), rgba(0, 30, 20, 0.35)),
+        url("https://images.unsplash.com/photo-1530866495561-507c9faab2ed?auto=format&fit=crop&w=1600&q=80");
     background-size: cover;
     background-position: center;
 }
 
 .hero-content {
     max-width: 650px;
+}
+
+.eyebrow {
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
 }
 
 .hero h2 {
@@ -350,84 +139,89 @@ footer {
 }
 
 .hero-button {
-    font-size: 17px;
+    display: inline-block;
+    background-color: #d6f36a;
+    color: #173b2e;
     padding: 16px 28px;
+    margin-top: 12px;
     border-radius: 12px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
 }
 
-/* WIDER TOUR SECTION */
+.hero-button:hover {
+    background-color: white;
+}
 
+/* TOUR LIST */
 #tours {
+    background-color: #f4f7f5;
     max-width: 1250px;
     padding: 55px 35px;
     box-sizing: border-box;
 }
 
+.tours-section > h2 {
+    color: #174c3c;
+    font-size: 32px;
+}
+
 .tour-container {
+    display: flex;
     gap: 28px;
+    margin-top: 30px;
+}
+
+.tour-card {
+    flex: 1;
+    min-width: 0;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .tour-image {
     height: 230px;
+    background-size: cover;
+    background-position: center;
 }
 
-/* MOBILE */
-
-@media (max-width: 750px) {
-    .navbar {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nav-links {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    #home.hero {
-        min-height: 480px;
-        padding: 35px 25px;
-    }
-
-    .hero h2 {
-        letter-spacing: -1px;
-    }
-
-    #tours {
-        padding: 30px 20px;
-    }
-}
-.auth-section {
-    max-width: 500px;
-    margin: 60px auto;
-    padding: 40px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+.rafting-image {
+    background-image: url("https://images.unsplash.com/photo-1568282248650-2aff2b2b1bc9?auto=format&fit=crop&w=900&q=85");
+    background-size: cover;
+    background-position: center;
 }
 
-.auth-section h2 {
-    font-size: 32px;
-    color: #103f32;
+.hiking-image {
+    background-image: url("https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=80");
 }
 
-.auth-section a {
-    color: #167c63;
-    font-weight: bold;
+.canyoning-image {
+    background-image: url("https://canyoning.ba/wp-content/uploads/2021/09/hrcavka_high.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.auth-section button {
-    width: 100%;
-    max-width: 350px;
-    background-color: #103f32;
+.tour-info {
+    padding: 20px;
 }
 
-.auth-section button:hover {
-    background-color: #167c63;
+.tour-button {
+    display: inline-block;
+    background-color: #174c3c;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
 }
+
+.tour-button:hover {
+    background-color: #26765c;
+}
+
 /* TOUR DETAILS */
-
 .details-section {
     max-width: 1100px;
     padding: 40px;
@@ -479,17 +273,30 @@ footer {
     margin-top: 20px;
 }
 
-@media (max-width: 750px) {
-    .details-layout {
-        flex-direction: column;
-    }
-
-    .details-photo {
-        min-height: 250px;
-    }
+/* LOGIN AND REGISTRATION */
+.auth-section {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
 }
-/* DASHBOARD */
 
+.auth-section h2 {
+    font-size: 32px;
+    color: #103f32;
+}
+
+.auth-section button {
+    background-color: #103f32;
+}
+
+.auth-section button:hover {
+    background-color: #167c63;
+}
+
+/* DASHBOARD, BOOKINGS AND PROFILE */
 .dashboard-section {
     max-width: 1100px;
     margin: 50px auto;
@@ -539,12 +346,138 @@ footer {
     background-color: #167c63;
 }
 
+/* TABLETS AND SMALL SCREENS */
 @media (max-width: 750px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    #home.hero {
+        min-height: 480px;
+        padding: 35px 25px;
+    }
+.hero h2 {
+        font-size: 32px;
+        letter-spacing: -1px;
+    }
+
+    #tours {
+        padding: 30px 20px;
+    }
+
+    .tour-container,
+    .details-layout,
     .dashboard-cards {
         flex-direction: column;
+    }
+
+    .details-photo {
+        min-height: 250px;
     }
 
     .dashboard-section {
         padding: 25px;
     }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 600px) {
+    html, body {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    .navbar {
+        width: 100%;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 28px;
+        max-width: 100%;
+    }
+
+    .logo-icon {
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 8px 6px;
+        margin: 0;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
+    .nav-links .register-link {
+        padding: 10px 4px;
+    }
+
+    main section {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    footer {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 20px 10px;
+        overflow-wrap: break-word;
+    }
+}
+
+/* WEATHER */
+.weather-section {
+    max-width: 900px;
+    padding: 40px;
+}
+
+.weather-section h2 {
+    color: #103f32;
+    font-size: 32px;
+}
+
+.weather-card {
+    background-color: #f4f7f5;
+    padding: 25px;
+    margin-top: 25px;
+    border-radius: 12px;
+    border: 1px solid #e0e8e3;
+}
+
+.weather-card h3 {
+    color: #103f32;
+}
+
+.weather-card p {
+    line-height: 1.6;
 }

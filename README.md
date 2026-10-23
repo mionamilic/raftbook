@@ -2,6 +2,7 @@
 
 ## Project Description
 
+
 RaftBook is a web application designed for exploring and booking outdoor adventures in the Foča region of Bosnia and Herzegovina.
 
 The application focuses on activities such as rafting on the Tara River, mountain hiking, and canyoning.
@@ -28,6 +29,7 @@ The goal of the project is to make it easier for tourists to discover available 
 - My Bookings and My Profile placeholder pages
 - Responsive layout
 - Single Page Application navigation
+- Weather page placeholder for future external API integration
 
 ### Planned for Future Milestones
 
@@ -47,7 +49,7 @@ The goal of the project is to make it easier for tourists to discover available 
 **Admin:** Will be able to manage tours, categories, and bookings.
 
 ## Database Design
-![RaftBook ER Diagram](docs/ERD.svg)
+![RaftBook ER Diagram](docs/ERD.png)
 The planned database contains five main entities:
 
 1. Users
@@ -61,8 +63,12 @@ The planned database contains five main entities:
 ```text
 raftbook/
 ├── frontend/
+│   ├── assets/
 │   ├── css/
+│   │   └── style.css
 │   ├── js/
+│   │   └── app.js
+│   ├── views/
 │   └── index.html
 ├── backend/
 │   ├── routes/
@@ -72,7 +78,8 @@ raftbook/
 │   ├── config/
 │   └── logs/
 ├── docs/
-│   └── AI_LOG.md
+│   ├── AI_LOG.md
+│   └── ERD.png
 ├── .gitignore
 ├── AGENTS.md
 └── README.md
@@ -85,7 +92,9 @@ raftbook/
 3. Open `index.html` in a web browser.
 4. Navigate through the application using the navigation links.
 
-The backend and database are not yet implemented.
+Note: This is a static frontend prototype. Login,
+registration, and booking features are not connected
+to a backend or database yet.
 
 ## Project Status
 

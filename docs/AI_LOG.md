@@ -33,6 +33,25 @@ The button initially had no JavaScript click handler.
 
 **Solution:** Added an event listener that displays a message and navigates to the login page.
 
+**Problem 3: CSS syntax errors
+
+While simplifying the stylesheet, several CSS syntax
+errors appeared because some selectors and braces
+were missing.
+
+**Solution:** Reviewed the errors in VS Code,
+corrected the CSS rules, and tested the website
+again in the browser.
+
+**Problem 4: Mobile navigation layout
+
+The navigation links did not fit correctly on
+smaller mobile screens.
+
+**Solution:** Adjusted the responsive CSS rules
+and tested the layout using browser developer tools.
+
+
 ### Verification
 
 The tour detail pages and Book Now navigation were tested in the browser. The Dashboard preview was also displayed successfully.
