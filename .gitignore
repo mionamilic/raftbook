@@ -22,3 +22,5 @@ Thumbs.db
 # Private PHP configuration
 backend/config/config.php
 backend/config/*.local.php
+
+/backend/config/config.php

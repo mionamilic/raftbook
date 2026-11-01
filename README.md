@@ -103,3 +103,78 @@ Milestone 1 – Static frontend prototype and initial project structure.
 ## Author
 
 International Burch University – Web Programming Course
+
+
+## Milestone 2 – Database and DAO Layer
+
+### Database
+
+RaftBook uses a MySQL relational database named `raftbook`.
+
+The database contains five entities:
+
+- Users – stores registered users and their roles.
+- Categories – organizes available adventure tours.
+- Tours – stores tour information, prices and categories.
+- Bookings – connects users with their reserved tours.
+- Reviews – stores user ratings and comments about tours.
+
+### Entity Relationships
+
+- One category can have multiple tours.
+- One user can have multiple bookings.
+- One tour can have multiple bookings.
+- One user can write multiple reviews.
+- One tour can have multiple reviews.
+
+### DAO Layer
+
+The backend uses a reusable `BaseDao.php` class.
+
+It provides the following methods:
+
+- `getAll()`
+- `getById($id)`
+- `insert($data)`
+- `update($id, $data)`
+- `delete($id)`
+
+The following DAO classes extend BaseDao:
+
+- `UserDAO.php`
+- `CategoryDAO.php`
+- `TourDAO.php`
+- `BookingDAO.php`
+- `ReviewDAO.php`
+
+### CRUD API
+
+The backend includes HTTP endpoints for Create (POST),
+Read (GET), Update (PUT/PATCH), and Delete (DELETE).
+
+Administrative operations require an authenticated
+administrator session.
+
+### Local Setup
+
+1. Install XAMPP and start MySQL.
+2. Open phpMyAdmin.
+3. Import `database/raftbook.sql`.
+4. Copy `backend/config/config.example.php`
+   to `backend/config/config.php`.
+5. Update the database credentials in `config.php`.
+6. Start the PHP server:
+
+   C:\xampp\php\php.exe -S 127.0.0.1:8000 -t backend
+
+7. Open `frontend/index.html` using VS Code Live Server.
+
+The local configuration file is excluded from Git.
+
+### Development Status
+
+Milestone 2 implements the MySQL database,
+DAO classes and CRUD backend endpoints.
+
+Additional frontend and backend integration
+will continue in later milestones.
