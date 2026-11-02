@@ -36,3 +36,28 @@ Significant AI assistance and actual errors encountered during development shoul
 ## Current Status
 
 Milestone 1 focuses on the static SPA frontend, initial project structure, and database planning.
+
+## Milestone 2 – Development Notes
+
+The project was extended with a MySQL database
+containing five related entities.
+
+A reusable BaseDao class was implemented for
+common database operations.
+
+Five DAO classes were created:
+UserDAO, CategoryDAO, TourDAO, BookingDAO
+and ReviewDAO.
+
+PHP routes were added for database access
+and CRUD operations.
+
+Database credentials were moved to a local
+configuration file excluded from Git.
+
+AI assistance was used for explaining PHP,
+DAO architecture, prepared statements,
+database integration and code organization.
+
+All generated code should be reviewed and
+tested before submission.
