@@ -24,3 +24,7 @@ backend/config/config.php
 backend/config/*.local.php
 
 /backend/config/config.php
+
+/backend/vendor/
+/backend/.env
+/backend/logs/*.log
